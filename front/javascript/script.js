@@ -4,16 +4,20 @@ document.addEventListener("DOMContentLoaded",() => {
 
 		let btnRefresh = document.getElementById("refresh");
 		let textPlaceholder = document.getElementById("text-placeholder");
+		let container = document.getElementsByClassName("container")[0];
 
 		btnRefresh.addEventListener("click",() => {
+		  textPlaceholder.innerHTML = '';
+		  textPlaceholder.classList.add('is-empty');
+		  container.classList.add('is-loading');
 		  worker.postMessage('test');
-		  console.log('Message envoyé au worker');
 		});
 
 		worker.onmessage = function(e) {
 	  		let textContent = e.data;
-	  		console.log('Message reçu depuis le worker '+ textContent);
 	  		textPlaceholder.innerHTML = textContent;
+	  		container.classList.remove('is-loading');
+	  		textPlaceholder.classList.remove('is-empty');
 		}
 	}
 })

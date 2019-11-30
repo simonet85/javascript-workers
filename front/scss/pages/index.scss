@@ -1,0 +1,38 @@
+h1 {
+	font-family: sans-serif;
+}
+.container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	#refresh {
+		width: 30%;
+		padding: 10px;
+		background-color: #268fc3;
+		color: white;
+		font-size: 16px;
+		border-radius: 5px;
+		outline: none;
+	    margin-bottom: 20px;
+	}
+	#text-placeholder {
+		&.is-empty { padding: 100px 20px; }
+		background-color: lightgray;
+	    padding: 20px 20px;
+	    line-height: 20px;
+	    letter-spacing: 1px;
+	    font-family: sans-serif;
+	    border-radius: 5px;
+	    width: 96%;
+	}
+	.loader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	&:not(.is-loading) {
+		.loader { display: none; }
+	}
+}
