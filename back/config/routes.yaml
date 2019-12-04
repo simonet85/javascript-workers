@@ -1,3 +1,8 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+index:
+  path: /{id}
+  controller: App\Controller\UserController::index
+  methods: GET

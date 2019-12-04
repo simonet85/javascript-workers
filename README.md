@@ -4,6 +4,17 @@ A small webpage realized in a school context. It uses Javascript web workers to 
 
 ![alt text](./readme_picture.png)
 
+## Install backend
+
+Create MAMP's host named js-worker.local running php 7.3.8
+
+Then, in Terminal, from base directory  <br>
+* cd back
+* composer install
+* php bin/console doctrine:database:create
+* php bin/console make:migration
+* php bin/console doctrine:migrations:migrate
+* php bin/console doctrine:fixtures:load
 
 ## How to make it work
 
