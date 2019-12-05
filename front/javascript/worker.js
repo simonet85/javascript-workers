@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const apiMaxId = 54;
+const apiMaxId = 49;
 
 onmessage = (e) => {
 	console.log('here')
