@@ -27,8 +27,11 @@ h1 {
   border-radius: 5px;
   width: 96%;
 }
-.container #text-placeholder.is-empty {
-  padding: 100px 20px;
+.container #text-placeholder > div {
+  font-weight: bold;
+}
+.container #text-placeholder > div span {
+  font-weight: normal;
 }
 .container .loader {
   position: absolute;
