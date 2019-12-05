@@ -14,17 +14,9 @@ document.addEventListener("DOMContentLoaded",() => {
 		});
 
 		worker.onmessage = function(e) {
-			let jsonTest = {
-				'id': '50',
-				'name': 'Kamren Carter',
-				'age': '74',
-				'city': '525 Hand Loop',
-				'bio': 'Eos voluptatibus neque et qui aperiam. Fuga et nostrum expedita commodi maxime porro.'
-			}
-	  		//let textContent = e.data;
-	  		//textPlaceholder.innerHTML = textContent;
+	  		let jsonFetched = e.data;
 	  		for(let fieldName of fields) {
-				document.getElementsByClassName(fieldName)[0].innerHTML = jsonTest[fieldName];
+				document.getElementsByClassName(fieldName)[0].innerHTML = jsonFetched[fieldName];
 			}
 	  		container.classList.remove('is-loading');
 		}
