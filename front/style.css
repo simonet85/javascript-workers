@@ -1,7 +1,7 @@
 h1 {
   font-family: sans-serif;
 }
-
+/* this is the main container */
 .container {
   position: relative;
   display: flex;
